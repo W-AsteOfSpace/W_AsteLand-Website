@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W_AsteLand - Store and Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <h1>Terms Of Services</h1>
+    </header>
+
+    <nav>
+        <label for="menu-toggle" class="menu-btn"><img src="images/menu.ico"><b>  MENU</b></label>
+
+        <input type="checkbox" id="menu-toggle">
+
+        <div class="menu">
+            <label for="menu-toggle" class="close-btn">&times;</label>
+
+            <div class="menu-items">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <hr>
+                <a href="products.html">Products</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+                <a href="tos.html">TOS</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="tos-box">
+            <h2>Commissions are for personal use only.</h2>
+            <p>Unless stated otherwise, all commissions are for personal use only.</p>
+            <p>Commissions can be used for things such as profile pictures and banners as long as they are not for profit.</p>
+
+            <h2>Artwork rights</h2>
+            <p>All rights to the artwork belong to me as the creator. I will be using any artworks created by me for my social media and portfolio.</p>
+
+            <h2>Generative AI</h2>
+            <p>I do NOT give consent for ANY of my art to be fed into ANY generative AI. This includes public AND privately owned AI.</p>
+            <p>If I find that any of my art is put into generative AI, I reserve the right to take back the art and take the comsumer to court.</p>
+
+            <h2>Payments</h2>
+            <p>I will only accept payments through paypal. I will not accept or ask for any family and friends payments as this is dangerous for myself and the consumer.</p>
+            <p>Payments $20 and under MUST be paid in full for me to start progress on the commission.</p>
+
+            <h2>Refunds</h2>
+            <h3 class="top-h3-tos">Full color commissions</h3>
+            <p>Refunds can be requested before the flat color has been completed.</p>
+            <p>Refunds cannot be requested after the flat color has been completed.</p>
+            <h3>Sketches</h3>
+            <p>Refunds cannot be requested for sketches.</p>
+        </div>
+    </main>
+</body>
+
+<footer>
+    <div class="socialLinks">
+        <a href="https://youtube.com/"><img src="images/youtube.ico"></a>
+        <a href="https://youtube.com/"><img src="images/tumblr.ico"></a>
+        <a href="https://youtube.com/"><img src="images/instagram.ico"></a>
+        <a href="https://youtube.com/"><img src="images/tikTok.ico"></a>
+    </div>
+    <div class="customization-footer">
+        <p>&copy;Created by W_AsteOfSpace 2026. All rights reserved. <span><button onclick="document.getElementById('policy').showModal();">Copyright & Privacy Policy</button></span></p>
+        <p><button onclick="speakText()">SPEAK PAGE</button> <button onclick="document.getElementById('dialogContainer').showModal()">preferences</button></p>
+    </div>
+    <dialog id="dialogContainer" class="preference-panel">
+        <h4>preference settings</h4>
+        <label>select size</label>
+        <select id="sizeOption" onchange="customizeText()">
+            <option value="16px">small</option>
+            <option value="25px">med</option>
+            <option value="35px">big</option>
+        </select>
+        <br>
+        <button onclick="document.getElementById('dialogContainer').close()">save</button>
+    </dialog>
+
+    <script>
+        function customizeText() {
+            let selectedTextSize = document.getElementById('sizeOption').value;
+            document.body.style.fontSize = selectedTextSize;
+        }
+    </script>
+</footer>
+
+<dialog id="policy" class="policyDialog">
+    <h1>Copyright and Privacy Policy</h1>
+    <button onclick="document.getElementById('policy').close();">CLOSE</button>
+</dialog>
+
+<!--Hidden text from the user-->
+<p id="speakthis" hidden>
+    Commissions are for personal use only.
+        Unless stated otherwise, all commissions are for personal use only.
+        Commissions can be used for things such as profile pictures and banners as long as they are not for profit.
+
+    Artwork rights
+        All rights to the artwork belong to me as the creator. I will be using any artworks created by me for my social media and portfolio.
+
+    Generative AI
+        I do NOT give consent for ANY of my art to be fed into ANY generative AI. This includes public AND privately owned AI.
+        If I find that any of my art is put into generative AI, I reserve the right to take back the art and take the comsumer to court.
+
+    Payments
+        I will only accept payments through paypal. I will not accept or ask for any family and friends payments as this is dangerous for myself and the consumer.
+        Payments $20 and under MUST be paid in full for me to start progress on the commission.
+
+    Refunds
+        Full color commissions
+        Refunds can be requested before the flat color has been completed.
+        Refunds cannot be requested after the flat color has been completed.
+
+    Sketches
+        Refunds cannot be requested for sketches.
+</p>
+
+<script src="policy.js"></script>
+<script src="tts.js"></script>
+
+</html>

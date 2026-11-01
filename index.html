@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W_AsteLand - Store and Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to W_AsteLand!</h1>
+    </header>
+
+    <nav>
+        <label for="menu-toggle" class="menu-btn"><img src="images/menu.ico"><b>  MENU</b></label>
+
+        <input type="checkbox" id="menu-toggle">
+
+        <div class="menu">
+            <label for="menu-toggle" class="close-btn">&times;</label>
+
+            <div class="menu-items">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <hr>
+                <a href="products.html">Products</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+                <a href="tos.html">TOS</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="box">
+            <div class="box-image">
+            <img class="floatingWaste" src="images/paintWaste.gif" alt="W_Aste the Klown holding a paint palette and paintbrush">
+            </div>
+            <div class="box-text">
+                <h2>What is this website?</h2>
+                <p>Hello and welcome to my portfolio, commissions, and art store!</p>
+                <p>This is a place where you can find my portfolio of previous artworks as well as artworks for sale.</p>
+                <p>You can also commission me to create artworks for you through this website!</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-image-mobile">
+                <img class="floatingWaste" src="images/floatingWaste.png" alt="W_Aste the Klown floating">
+            </div>
+            <div class="box-text">
+                <h2>How do commissions work?</h2>
+                <p>Commissions are where you as the consumer hire me to create an artwork for yourself or to gift to another.</p>
+                <p>There are many different types of commissions I offer from sketches to completed and rendered artworks.</p>
+                <p>If you would like to commission me then go to either my services page to see what I offer or go to my contact page if you already know what you want to commission.</p>
+            </div>
+            <div class="box-image-pc">
+                <img class="floatingWaste" src="images/floatingWaste.png" alt="floatingWaste">
+            </div>
+        </div>
+    </main>
+</body>
+
+<footer>
+    <div class="socialLinks">
+        <a href="https://youtube.com/"><img src="images/youtube.ico"></a>
+        <a href="https://tumblr.com/"><img src="images/tumblr.ico"></a>
+        <a href="https://instagram.com/"><img src="images/instagram.ico"></a>
+        <a href="https://tiktok.com/"><img src="images/tikTok.ico"></a>
+    </div>
+    <div class="customization-footer">
+        <p>&copy;Created by W_AsteOfSpace 2026. All rights reserved. <span><button onclick="document.getElementById('policy').showModal();">Copyright & Privacy Policy</button></span></p>
+        <p><button onclick="speakText()">SPEAK PAGE</button> <button onclick="document.getElementById('dialogContainer').showModal()">preferences</button></p>
+    </div>
+    <dialog id="dialogContainer" class="preference-panel">
+        <h4>preference settings</h4>
+        <label>select size</label>
+        <select id="sizeOption" onchange="customizeText()">
+            <option value="16px">small</option>
+            <option value="25px">med</option>
+            <option value="35px">big</option>
+        </select>
+        <br>
+        <button onclick="document.getElementById('dialogContainer').close()">save</button>
+    </dialog>
+
+    <script>
+        function customizeText() {
+            let selectedTextSize = document.getElementById('sizeOption').value;
+            document.body.style.fontSize = selectedTextSize;
+        }
+    </script>
+</footer>
+
+<dialog id="policy" class="policyDialog">
+    <h1>Copyright and Privacy Policy</h1>
+    <button onclick="document.getElementById('policy').close();">CLOSE</button>
+</dialog>
+
+<!--Hidden text from the user-->
+<p id="speakthis" hidden>
+    What is this website?
+        Hello and welcome to my portfolio, commissions, and art store!
+        This is a place where you can find my portfolio of previous artworks as well as artworks for sale.
+        You can also commission me to create artworks for you through this website!
+    How do commissions work?
+        Commissions are where you as the consumer hire me to create an artwork for yourself or to gift to another.
+        There are many different types of commissions I offer from sketches to completed and rendered artworks.
+        If you would like to commission me then go to either my services page to see what I offer or go to my contact page if you already know what you want to commission.
+</p>
+
+<script src="policy.js"></script>
+<script src="tts.js"></script>
+
+</html>

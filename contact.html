@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W_AsteLand - Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <h1>Contact</h1>
+    </header>
+
+    <nav>
+        <label for="menu-toggle" class="menu-btn"><img src="images/menu.ico"><b>  MENU</b></label>
+
+        <input type="checkbox" id="menu-toggle">
+
+        <div class="menu">
+            <label for="menu-toggle" class="close-btn">&times;</label>
+
+            <div class="menu-items">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <hr>
+                <a href="products.html">Products</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+                <a href="tos.html">TOS</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <form class="contact-box">
+            <h1>Contact</h1>
+            <div>
+                <label for="fullname">Full name: </label>
+                <input type="text" id="fullname" name="fullname" placeholder="e.g. John Doe" required>
+            </div>
+            <div>
+                <label for="email">Email: </label>
+                <input type="email" id="email" name="email" placeholder="e.g. JohnDoe@email.com" required>
+            </div>
+            <div>
+                <label for="sortPrice">Contact reason: </label>
+                <select id="sortPrice" class="form-select">
+                        <option>Error report/glitch</option>
+                        <option>Feedback</option>
+                        <option>Comissions</option>
+                        <option>Other</option>
+                </select>
+            </div>
+            <div>
+                <label for="description">Description: </label>
+                <br>
+                <textarea id="description" name="description" required="true" rows="5" cols="50"></textarea>
+            </div>
+            <div>
+                <label for >By checking the box and pressing submit you agree to the <a href="tos.html">Terms of Service</a></label>
+                <input type="checkbox" required="true">
+            </div>
+            <div>
+                
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </main>
+</body>
+
+<footer>
+    <div class="socialLinks">
+        <a href="https://youtube.com/"><img src="images/youtube.ico"></a>
+        <a href="https://tumblr.com/"><img src="images/tumblr.ico"></a>
+        <a href="https://instagram.com/"><img src="images/instagram.ico"></a>
+        <a href="https://tiktok.com/"><img src="images/tikTok.ico"></a>
+    </div>
+    <div class="customization-footer">
+        <p>&copy;Created by W_AsteOfSpace 2026. All rights reserved. <span><button onclick="document.getElementById('policy').showModal();">Copyright & Privacy Policy</button></span></p>
+        <p><button onclick="speakText()">SPEAK PAGE</button> <button onclick="document.getElementById('dialogContainer').showModal()">preferences</button></p>
+    </div>
+    <dialog id="dialogContainer" class="preference-panel">
+        <h4>preference settings</h4>
+        <label>select size</label>
+        <select id="sizeOption" onchange="customizeText()">
+            <option value="16px">small</option>
+            <option value="25px">med</option>
+            <option value="35px">big</option>
+        </select>
+        <br>
+        <button onclick="document.getElementById('dialogContainer').close()">save</button>
+    </dialog>
+
+    <script>
+        function customizeText() {
+            let selectedTextSize = document.getElementById('sizeOption').value;
+            document.body.style.fontSize = selectedTextSize;
+        }
+    </script>
+</footer>
+
+<dialog id="policy" class="policyDialog">
+    <h1>Copyright and Privacy Policy</h1>
+    <button onclick="document.getElementById('policy').close();">CLOSE</button>
+</dialog>
+
+<!--Hidden text from the user-->
+<p id="speakthis" hidden>
+    Full name: name input
+    Email: email input
+    Contact reason:
+        Error report/glitch
+        Feedback
+        Comissions
+        Other
+    Description: text input
+    By checking the box and pressing submit you agree to the Terms of Service. Checkbox
+    Submit button
+</p>
+
+<script src="policy.js"></script>
+<script src="tts.js"></script>
+
+</html>

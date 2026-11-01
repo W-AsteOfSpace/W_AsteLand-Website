@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W_AsteLand - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <h1>Portfolio</h1>
+    </header>
+
+    <nav>
+        <label for="menu-toggle" class="menu-btn"><img src="images/menu.ico"><b>  MENU</b></label>
+
+        <input type="checkbox" id="menu-toggle">
+
+        <div class="menu">
+            <label for="menu-toggle" class="close-btn">&times;</label>
+
+            <div class="menu-items">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <hr>
+                <a href="products.html">Products</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+                <a href="tos.html">TOS</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="port-box">
+            <div class="port-box-image">
+            <img class="floatingWaste" src="images/drawings/portfolio01.png" alt="W_Aste the Klown holding a paint palette and paintbrush">
+            </div>
+            <div class="port-box-text">
+                <h2>Danny the star walker</h2>
+                <h3>Art piece type</h3>
+                <p>Refrence sheet</p>
+                <h3>Date of creation</h3>
+                <p>1 July 2025</p>
+                <h3>Description</h3>
+                <p>This art piece was made for the art gifting contest ArtFight during the 2025 event <br>Danny is an older piece inspired by stars, space, and other cosmic entities.</p>
+            </div>
+        </div>
+        <div class="port-box">
+            <div class="port-box-image-mobile">
+                <img class="floatingWaste" src="images/drawings/portfolio02.png" alt="W_Aste the Klown floating">
+            </div>
+            <div class="port-box-text">
+                <h2>David the goat</h2>
+                <h3>Art piece type</h3>
+                <p>Refrence sheet</p>
+                <h3>Date of creation</h3>
+                <p>29 June 2025</p>
+                <h3>Description</h3>
+                <p>This art piece was made for the art gifting contest ArtFight during the 2026 event <br>David is my own personal character partially inspired by my own roblox avatar as well as other goat-like characters</p>
+            </div>
+            <div class="port-box-image-pc">
+                <img class="david" src="images/drawings/portfolio02.png" alt="floatingWaste">
+            </div>
+        </div>
+        <div class="port-box">
+            <div class="port-box-image">
+            <img class="floatingWaste" src="images/drawings/portfolio03.png" alt="W_Aste the Klown holding a paint palette and paintbrush">
+            </div>
+            <div class="port-box-text">
+                <h2>The King</h2>
+                <h3>Art piece type</h3>
+                <p>Gifted art piece</p>
+                <h3>Date of creation</h3>
+                <p>25 July 2026</p>
+                <h3>Description</h3>
+                <p>This art piece was made for the art gifting contest ArtFight during the 2026 event <br>Riko is a pokemon inspired character made by <a href="https://artfight.net/~Astromania">Astromania</a></p>
+            </div>
+        </div>
+        <div class="port-box">
+            <div class="port-box-image-mobile">
+                <img class="floatingWaste" src="images/drawings/portfolio02.png" alt="W_Aste the Klown floating">
+            </div>
+            <div class="port-box-text">
+                <h2>Riko the Ditto</h2>
+                <h3>Art piece type</h3>
+                <p>Gifted art piece</p>
+                <h3>Date of creation</h3>
+                <p>31 July 2026</p>
+                <h3>Description</h3>
+                <p>This art piece was made for the art gifting contest ArtFight during the 2026 event <br>Riko is a pokemon inspired character made by <a href="https://artfight.net/~Astromania">Astromania</a></p>
+            </div>
+            <div class="port-box-image-pc">
+                <img class="floatingWaste" src="images/drawings/portfolio04.png" alt="floatingWaste">
+            </div>
+        </div>
+    </main>
+</body>
+
+<footer>
+    <div class="socialLinks">
+        <a href="https://youtube.com/"><img src="images/youtube.ico"></a>
+        <a href="https://tumblr.com/"><img src="images/tumblr.ico"></a>
+        <a href="https://instagram.com/"><img src="images/instagram.ico"></a>
+        <a href="https://tiktok.com/"><img src="images/tikTok.ico"></a>
+    </div>
+    <div class="customization-footer">
+        <p>&copy;Created by W_AsteOfSpace 2026. All rights reserved. <span><button onclick="document.getElementById('policy').showModal();">Copyright & Privacy Policy</button></span></p>
+        <p><button onclick="speakText()">SPEAK PAGE</button> <button onclick="document.getElementById('dialogContainer').showModal()">preferences</button></p>
+    </div>
+    <dialog id="dialogContainer" class="preference-panel">
+        <h4>preference settings</h4>
+        <label>select size</label>
+        <select id="sizeOption" onchange="customizeText()">
+            <option value="16px">small</option>
+            <option value="25px">med</option>
+            <option value="35px">big</option>
+        </select>
+        <br>
+        <button onclick="document.getElementById('dialogContainer').close()">save</button>
+    </dialog>
+
+    <script>
+        function customizeText() {
+            let selectedTextSize = document.getElementById('sizeOption').value;
+            document.body.style.fontSize = selectedTextSize;
+        }
+    </script>
+</footer>
+
+<dialog id="policy" class="policyDialog">
+    <h1>Copyright and Privacy Policy</h1>
+    <button onclick="document.getElementById('policy').close();">CLOSE</button>
+</dialog>
+
+<!--Hidden text from the user-->
+<p id="speakthis" hidden>
+    Unfortunately Text To Speach is unavailable for the portfolio page. This page contains artworks that are a representation of my art skils.
+</p>
+
+<script src="policy.js"></script>
+<script src="tts.js"></script>
+
+</html>

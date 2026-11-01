@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W_AsteLand - Products</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <h1>Products</h1>
+    </header>
+
+    <nav>
+        <label for="menu-toggle" class="menu-btn"><img src="images/menu.ico"><b>  MENU</b></label>
+
+        <input type="checkbox" id="menu-toggle">
+
+        <div class="menu">
+            <label for="menu-toggle" class="close-btn">&times;</label>
+
+            <div class="menu-items">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <hr>
+                <a href="products.html">Products</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+                <a href="tos.html">TOS</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <h1>Product Catalog</h1>     
+        <div class="tools">
+            <input type="text" id="searchInput" class="form-control" placeholder="Search products...">
+            <select id="categoryFilter">
+                <option value="All">All Categories</optiosn>
+            </select>
+            <select id="sortPrice" class="form-select">
+                <option value="asc">Price: Low to High</option>
+                <option value="desc">Price: High to Low</option>
+            </select>
+        </div>
+        <div class="tags">
+            <h4>Tags: <span id="tag-list"> </span></h4>
+        </div>
+
+        <div id="productGrid"></div>
+        <script src="productData.js"></script>
+        <script src="product-catalog.js"></script>
+    </main>
+</body>
+
+<footer>
+    <div class="socialLinks">
+        <a href="https://youtube.com/"><img src="images/youtube.ico"></a>
+        <a href="https://tumblr.com/"><img src="images/tumblr.ico"></a>
+        <a href="https://instagram.com/"><img src="images/instagram.ico"></a>
+        <a href="https://tiktok.com/"><img src="images/tikTok.ico"></a>
+    </div>
+    <div class="customization-footer">
+        <p>&copy;Created by W_AsteOfSpace 2026. All rights reserved. <span><button onclick="document.getElementById('policy').showModal();">Copyright & Privacy Policy</button></span></p>
+        <p><button onclick="speakText()">SPEAK PAGE</button> <button onclick="document.getElementById('dialogContainer').showModal()">preferences</button></p>
+    </div>
+    <dialog id="dialogContainer" class="preference-panel">
+        <h4>preference settings</h4>
+        <label>select size</label>
+        <select id="sizeOption" onchange="customizeText()">
+            <option value="16px">small</option>
+            <option value="25px">med</option>
+            <option value="35px">big</option>
+        </select>
+        <br>
+        <button onclick="document.getElementById('dialogContainer').close()">save</button>
+    </dialog>
+
+    <script>
+        function customizeText() {
+            let selectedTextSize = document.getElementById('sizeOption').value;
+            document.body.style.fontSize = selectedTextSize;
+        }
+    </script>
+</footer>
+
+<dialog id="policy" class="policyDialog">
+    <h1>Copyright and Privacy Policy</h1>
+    <button onclick="document.getElementById('policy').close();">CLOSE</button>
+</dialog>
+
+<!--Hidden text from the user-->
+<p id="speakthis" hidden>
+    Unfortunately Text To Speach is unavailable for the products page. This page contains artworks that have been created to be sold on this website.
+</p>
+
+<script src="policy.js"></script>
+<script src="tts.js"></script>
+
+</html>
